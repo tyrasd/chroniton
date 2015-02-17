@@ -26,6 +26,20 @@ d3.select(document.body)
         .width(500));
 
 (function() {
+d3.select(document.body).append('h3').text('Select only Years');
+var yearOutput = d3.select(document.body).append('h2');
+d3.select(document.body)
+    .append('div')
+    .call(
+      chroniton()
+        .domain([new Date('1/1/2000'), new Date('1/1/2015')])
+        .width(500)
+        .on('change', function(d) {
+          yearOutput.text(d3.time.year(d));
+        }));
+})();
+
+(function() {
 d3.select(document.body).append('h3').text('Play button');
 d3.select(document.body)
     .append('div')
