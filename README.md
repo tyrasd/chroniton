@@ -71,7 +71,7 @@ d3.select(document.body)
   .append('div')
   .call(
     chroniton()
-      .domain([new Date(+new Date() - 60 * 1000), new Date()])
+      .domain([new Date(+new Date() - 60 * 1000), new Date()]));
 ```
 
 ### `.keybinding(true or false)`
